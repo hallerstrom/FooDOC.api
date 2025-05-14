@@ -9,6 +9,7 @@ namespace FooDOC.api.Data;
 public class AppDbContext : IdentityDbContext<IdentityUser>
 {
     public DbSet<TempCCP> TempCCPs { get; set; }
+    public DbSet<Product> Products { get; set; }
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
         this.Database.EnsureCreated();
@@ -63,6 +64,14 @@ public class AppDbContext : IdentityDbContext<IdentityUser>
         modelBuilder.Entity<TempCCP>().HasData(
             new TempCCP { Id = 1, Product = "Hel Kyckling", Temp = 99.54, CreatedAt = DateTime.UtcNow },
             new TempCCP { Id = 2, Product = "Kamben", Temp = 30.55, CreatedAt = DateTime.UtcNow }
+        );
+
+
+        // Seeda produkter som mock
+        modelBuilder.Entity<Product>().HasData(
+            new Product { Id = 1, Name ="Hel Kyckling"},
+            new Product { Id = 2, Name ="Kycklingben"},
+            new Product { Id = 3, Name ="Kamben"}
         );
     }
 }
