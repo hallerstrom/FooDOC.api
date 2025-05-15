@@ -21,7 +21,6 @@ namespace FooDOC.api.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "admin")]
         public async Task<IActionResult> GetProducts()
         {
             var products = await _context.Products.ToListAsync();
