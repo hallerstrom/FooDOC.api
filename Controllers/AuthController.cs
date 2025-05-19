@@ -27,7 +27,7 @@ namespace FooDOC.api.Controllers
             _configuration = configuration;
             
         }
-
+        
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDTO model)
         {
