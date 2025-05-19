@@ -19,7 +19,7 @@ dotnet run
 
 **Projektet kommer köras på** `http://localhost:5164/`
 
-**För att öppna Swagger-dokumentationen i din webbläsare: ** `http://localhost:5164/swagger/index.html`
+**För att öppna Swagger-dokumentationen i din webbläsare** `http://localhost:5164/swagger/index.html`
 
 ## Endpoints
 
