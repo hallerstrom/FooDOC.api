@@ -7,7 +7,8 @@ using Microsoft.EntityFrameworkCore;
 namespace FooDOC.api.Data;
 
 public class AppDbContext : IdentityDbContext<IdentityUser>
-{
+{   
+    // Skapa DbSet 
     public DbSet<TempCCP> TempCCPs { get; set; }
     public DbSet<Product> Products { get; set; }
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
@@ -62,8 +63,9 @@ public class AppDbContext : IdentityDbContext<IdentityUser>
 
         // Seeda kontrollpunkter som mockdata
         modelBuilder.Entity<TempCCP>().HasData(
-            new TempCCP { Id = 1, Product = "Hel Kyckling", Temp = 99.54, CreatedAt = DateTime.UtcNow },
-            new TempCCP { Id = 2, Product = "Kamben", Temp = 30.55, CreatedAt = DateTime.UtcNow }
+            new TempCCP { Id = 1, Product = "Hel Kyckling", Temp = 92.54, CreatedAt = DateTime.UtcNow },
+            new TempCCP { Id = 2, Product = "Kamben", Temp = 89.55, CreatedAt = DateTime.UtcNow },
+            new TempCCP { Id = 3, Product = "Kycklingben", Temp = 85.23, CreatedAt = new DateTime(2025, 5, 1, 12, 0, 0) }
         );
 
 
