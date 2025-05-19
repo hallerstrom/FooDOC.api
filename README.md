@@ -19,28 +19,35 @@ dotnet run
 
 **Projektet kommer köras på** `http://localhost:5164/`
 
-**För att öppna Swagger-dokumentationen i din webbläsare** `http://localhost:5164/swagger/index.html`
+**För att öppna Swagger-dokumentationen i din webbläsare: ** `http://localhost:5164/swagger/index.html`
 
 ## Endpoints
 
 #### AuthController
 
-Method	Endpoint	    Auth	Description
-POST	/api/auth/login	    ❌	        Logga in och få en JWT-token.
-POST	/api/auth/register  ❌	        Registrera en ny användare.
+
+| Method | Endpoint           | Auth | Beskrivning                    |
+| -------- | -------------------- | ------ | -------------------------------- |
+| POST   | /api/auth/login    | ❌   | Logga in och få en JWT-token. |
+| POST   | /api/auth/register | ❌   | Registrera en ny användare.   |
 
 #### CCPController
 
-Method	Endpoint	Auth	Description
-POST	/api/ccp	❌	Skapa en ny CCP.
-GET	/api/ccp	✅	Hämta alla CCPs.
-GET	/api/ccp/{id}	✅	Hämta en specifik CCP.
+
+| Metod | Endpoint      | Auth | Beskrivning             |
+| ------- | --------------- | ------ | ------------------------- |
+| POST  | /api/ccp      | ❌   | Skapa en ny CCP.        |
+| GET   | /api/ccp      | ✅   | Hämta alla CCPs.       |
+| GET   | /api/ccp/{id} | ✅   | Hämta en specifik CCP. |
 
 #### ProductController
 
-Method	Endpoint	Auth	Description
-GET	/api/product	❌	Hämta alla produkter.
-POST	/api/product	✅	Lägg till en ny produkt.
+
+| Metod | Endpoint     | Auth | Beskrivning               |
+| ------- | -------------- | ------ | --------------------------- |
+| GET   | /api/product | ❌   | Hämta alla produkter.    |
+| POST  | /api/product | ✅   | Lägg till en ny produkt. |
+
 
 ## JWT-Authentication
 
