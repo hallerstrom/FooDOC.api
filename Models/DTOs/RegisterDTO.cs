@@ -1,3 +1,5 @@
+// DTO för registrering
+
 public class RegisterDTO
 {
     public string Username { get; set; } = string.Empty;

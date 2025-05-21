@@ -20,17 +20,20 @@ namespace FooDOC.api.Controllers
             _context = context;
         }
         
+        // Hämta alla produkter
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
             var products = await _context.Products.ToListAsync();
             return Ok(products);
         }
-
+        
+        // Lägg till en ny produkt
         [HttpPost]
         [Authorize(Roles = "admin")]
         public async Task<IActionResult> AddProduct([FromBody] Product product)
-        {
+        {   
+            // Kontroll om produktnamnet är giltigt
             if (product == null || string.IsNullOrWhiteSpace(product.Name))
             {
                 return BadRequest("Ogiltigt produktnamn.");

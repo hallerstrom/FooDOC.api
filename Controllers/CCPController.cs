@@ -20,7 +20,7 @@ namespace FooDOC.api.Controllers
             _context = context;
         }
 
-         // Skapa en ny kontrollpunkt
+         // Skapa en ny kontrollpunkt (tempraturdatning)
         [HttpPost]
         public async Task<IActionResult> CreateCCP([FromBody] TempCCP ccp)
         {
