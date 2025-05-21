@@ -37,7 +37,7 @@ public class AppDbContext : IdentityDbContext<IdentityUser>
         adminUser.PasswordHash = hasher.HashPassword(adminUser, "Admin123!");
 
         modelBuilder.Entity<IdentityUser>().HasData(adminUser);
-
+        
         modelBuilder.Entity<IdentityUserClaim<string>>().HasData(new IdentityUserClaim<string>
         {
         Id = 1,
