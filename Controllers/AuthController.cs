@@ -28,6 +28,7 @@ namespace FooDOC.api.Controllers
             
         }
         
+        // Skapa en ny användare (Används ej i prototypen)
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDTO model)
         {
@@ -48,7 +49,7 @@ namespace FooDOC.api.Controllers
             return Ok(new { user.Id, user.UserName, Role = roleClaim });
         }
 
-            
+        // Logga in användare och skapa JWT-token
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO model)
         {
