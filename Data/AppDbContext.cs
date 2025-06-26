@@ -63,9 +63,9 @@ public class AppDbContext : IdentityDbContext<IdentityUser>
 
         // Seeda kontrollpunkter som mockdata
         modelBuilder.Entity<TempCCP>().HasData(
-            new TempCCP { Id = 1, Product = "Hel Kyckling", Temp = 92.54, CreatedAt = DateTime.UtcNow, Type = "Tillagning" },
-            new TempCCP { Id = 2, Product = "Kamben", Temp = 89.55, CreatedAt = DateTime.UtcNow, Type = "Nedkylning" },
-            new TempCCP { Id = 3, Product = "Kycklingben", Temp = 85.23, CreatedAt = new DateTime(2025, 5, 1, 12, 0, 0), Type = "Tillagning" }
+            new TempCCP { Id = 1, Product = "Hel Kyckling", Temp = 92.54, CreatedAt = DateTime.UtcNow, Type = "cooking" },
+            new TempCCP { Id = 2, Product = "Kamben", Temp = 89.55, CreatedAt = DateTime.UtcNow, Type = "cooling" },
+            new TempCCP { Id = 3, Product = "Kycklingben", Temp = 85.23, CreatedAt = new DateTime(2025, 5, 1, 12, 0, 0), Type = "cooling" }
         );
 
 
